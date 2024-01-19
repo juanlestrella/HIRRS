@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --white: #F9FAF7;
+    --blue: #0070E0;
+    --serenity: #9BBBE3;
+    --midnight-blue: #222F38;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #222F38;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+li, a {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.navlinks li {
+    display: inline-block;
+    list-style: none;
+    padding: 2rem 1rem;
+}
+
+.navlinks li a {
+    /* color: var(--blue); */
+    padding: 1rem;
+}
+
+.navlinks li a:hover {
+    /* color: var(--blue); */
+    background-color: var(--blue);
+    padding: 1rem;
+    border-radius: 50px;
+}
+
+.logo {
+    cursor: pointer;
+}
