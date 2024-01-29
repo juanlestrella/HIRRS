@@ -1,3 +1,4 @@
+/* Google fonts for Roboto and Roboto-Condensed */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -16,6 +17,10 @@
     padding: 0;
 }
 
+html {
+    min-width: 400px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,11 +28,32 @@ header {
     background-color: #222F38;
 }
 
+/* Hide the hamburger menu */
+.icon {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 30px 20px;
+    cursor: pointer;
+}
+
+/************* NavBar ***************/
+
 /* Primary Navigation items */
 .navlist li {
     display: inline-block;
     list-style: none;
-    padding: 1.25rem 1rem;
+    /* padding: 1.25rem 1rem; */
+}
+
+/* Direct list item (li) children of .navlist */
+.navlist > li {
+    padding: 1.25rem 1rem 0;
 }
 
 /* Primary navigation items link*/
@@ -46,11 +72,13 @@ header {
     border-radius: 1.5rem;
 }
 
+/**************** DROP DOWN LIST ************************/
+
 /* Unordered list of the drop downs */
 .nav_dropdown {
     position: absolute;
-    top: 3.7rem;
-    min-width: 150px;
+    top: 4.5rem;
+    min-width: 120px;
     box-shadow: 0 0 5px gray;
     background-color: #fff;
     border-radius: 2%;
@@ -64,19 +92,38 @@ header {
     display: block;
     list-style: none;
     color: var(--midnight-blue);
+    padding: 1.25rem 1rem;
 }
 
+/* Highlight and pointer when hovering on each list item */
 .nav_dropdown li:hover, .nav_dropdown li:focus {
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
 }
 
+/* Make the drop down list visible */
 .navlist li:hover > .nav_dropdown, .navlist li:focus > .nav_dropdown {
     opacity: 1;
     visibility: visible;
 }
 
+/* Company Logo */
 .logo {
     cursor: pointer;
+    margin: 20px 30px;
+    width: 100px;
+    height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Responsive: when the screen is px or smaller **/
+@media only screen and (max-width: 1000px){
+    .navlist {
+        visibility: hidden;
+    }
+    .icon {
+        visibility: visible;
+    }
 }
