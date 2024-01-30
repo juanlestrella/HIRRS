@@ -8,7 +8,7 @@
     --blue: #0070E0;
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
-    --nav-height: 94px;
+    --nav-height: 79px;
 }
 
 /* boilerplate to reduce all margin and padding to  */
@@ -29,19 +29,19 @@ header {
 
 /************* NavBar ***************/
 
-/* Primary Navigation items */
-.navlist li {
+/* All children list item in navigation */
+.nav_list li {
     display: inline-block;
     list-style: none;
 }
 
 /* Direct list item (li) children of .navlist */
-.navlist > li {
-    padding: 1.25rem 1rem 0;
+.main_menu_li {
+    padding: 30px 0;
 }
 
 /* Primary navigation items link*/
-.navlist li a {
+.nav_list li a {
     text-decoration: none;
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
@@ -50,7 +50,7 @@ header {
 }
 
 /* Primary navigation items link hover and focus*/
-.navlist li a:hover, .navlinks li a:focus {
+.nav_list li a:hover, .nav_list li a:focus {
     background-color: var(--blue);
     padding: 1rem;
     border-radius: 1.5rem;
@@ -66,8 +66,9 @@ header {
     box-shadow: 0 0 5px gray;
     background-color: #fff;
     border-radius: 2%;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
+    visibility: hidden;
+    /* opacity: 0; */
+    transition: visibility 200ms ease-in-out;
 }
 
 /* Each listItem in the unordered list */
@@ -86,12 +87,16 @@ header {
 }
 
 /* Make the drop down list visible */
-.navlist li:hover > .nav_dropdown, .navlist li:focus > .nav_dropdown {
-    opacity: 1;
+.nav_list li:hover > .nav_dropdown, .nav_list li:focus > .nav_dropdown {
+    /* opacity: 1; */
+    visibility: visible;
 }
 
 /* Company Logo */
 .logo {
+    position: absolute;
+    top:0;
+    left:0;
     cursor: pointer;
     margin: 20px 0 20px 20px;
     width: 100px;
@@ -103,6 +108,7 @@ header {
 /* Hide the hamburger menu */
 .icon {
     visibility: hidden;
+    /* absolute takes this element out of the flex layout*/
     position: absolute;
     right: 0;
     top: 0;
@@ -116,14 +122,18 @@ header {
 
 /*Responsive: when the screen is px or smaller **/
 @media only screen and (max-width: 1000px){
-    .navlist {
+    /* .nav_list {
         visibility: hidden;
-    }
+    } */
     .icon {
         visibility: visible;
     }
-    .navlist li {
-        display: block;
-        position:
+    header {
+        max-height: 500px;
+        height: 500px;
+        justify-content: center;
     }
+    .nav_list li {
+        display: block;
+    } 
 }
