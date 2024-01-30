@@ -8,6 +8,7 @@
     --blue: #0070E0;
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
+    --nav-height: 94px;
 }
 
 /* boilerplate to reduce all margin and padding to  */
@@ -23,7 +24,7 @@ header {
     align-items: center;
     background-color: #222F38;
     /* prevents the height from moving when the width of the screen is too low */
-    max-height: 94px;
+    max-height: var(--nav-height);
 }
 
 /************* NavBar ***************/
@@ -60,13 +61,12 @@ header {
 /* Unordered list of the drop downs */
 .nav_dropdown {
     position: absolute;
-    top: 4.5rem;
+    top: var(--nav-height);
     min-width: 120px;
     box-shadow: 0 0 5px gray;
     background-color: #fff;
     border-radius: 2%;
     opacity: 0;
-    visibility: hidden;
     transition: opacity 200ms ease-in-out;
 }
 
@@ -88,7 +88,6 @@ header {
 /* Make the drop down list visible */
 .navlist li:hover > .nav_dropdown, .navlist li:focus > .nav_dropdown {
     opacity: 1;
-    visibility: visible;
 }
 
 /* Company Logo */
@@ -122,5 +121,9 @@ header {
     }
     .icon {
         visibility: visible;
+    }
+    .navlist li {
+        display: block;
+        position:
     }
 }
