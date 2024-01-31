@@ -36,12 +36,12 @@ header {
 }
 
 /* Direct list item (li) children of .navlist */
-.main_menu_li {
+.main_menu {
     padding: 30px 0;
 }
 
 /* Primary navigation items link*/
-.nav_list li a {
+.main_menu a {
     text-decoration: none;
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
@@ -59,7 +59,7 @@ header {
 /**************** DROP DOWN LIST ************************/
 
 /* Unordered list of the drop downs */
-.nav_dropdown {
+.submenu {
     position: absolute;
     top: var(--nav-height);
     min-width: 120px;
@@ -72,22 +72,28 @@ header {
 }
 
 /* Each listItem in the unordered list */
-.nav_dropdown li {
+.submenu li {
     display: block;
     list-style: none;
+    /* padding: 1.25rem 1rem; */
+}
+
+/* Each a tag in each listItem */
+.submenu a {
+    display: block;
     color: var(--midnight-blue);
-    padding: 1.25rem 1rem;
+    /* padding: 1.25rem 1rem; */
 }
 
 /* Highlight and pointer when hovering on each list item */
-.nav_dropdown li:hover, .nav_dropdown li:focus {
+.submenu li:hover, .submenu li:focus {
     background-color: var(--blue);
     color: var(--white);
     cursor: pointer;
 }
 
 /* Make the drop down list visible */
-.nav_list li:hover > .nav_dropdown, .nav_list li:focus > .nav_dropdown {
+.main_menu:hover > .submenu, .main_menu:focus > .submenu {
     /* opacity: 1; */
     visibility: visible;
 }
@@ -106,7 +112,7 @@ header {
 }
 
 /* Hide the hamburger menu */
-.icon {
+.hamburger {
     visibility: hidden;
     /* absolute takes this element out of the flex layout*/
     position: absolute;
@@ -119,13 +125,16 @@ header {
     margin: 20px 20px 20px 0;
     cursor: pointer;
 }
+.hamburger_button {
+    border: 0;
+}
 
 /*Responsive: when the screen is px or smaller **/
 @media only screen and (max-width: 1000px){
     /* .nav_list {
         visibility: hidden;
     } */
-    .icon {
+    .hamburger {
         visibility: visible;
     }
     header {
