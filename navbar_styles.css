@@ -20,23 +20,35 @@
 
 /************* NavBar ***************/
 .nav_bar {
-    display: flex;
+    /*FLEXBOX*/
+    /* display: flex;
     justify-content: space-between;
+    align-items: center; */
+
+    /*GRID LAYOUT*/
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     background-color: #222F38;
+    gap: 10px;
+
     /* prevents the height from moving when the width of the screen is too low */
-    max-height: var(--nav-height);
+    /* max-height: var(--nav-height); */
 }
 
-/* All children list item in navigation */
-.nav_list li {
+/* Parent unordered list */
+.nav_list {
     display: inline-block;
-    list-style: none;
+    grid-column: 3;
+    grid-row: 1;
+    /* text-align: right; */
 }
 
 /* Direct list item (li) children of .navlist */
 .main_menu {
-    padding: 30px 0;
+    display: inline-block;
+    list-style: none;
+    padding: 1rem 0;
 }
 
 /* Primary navigation items link*/
@@ -68,6 +80,7 @@
     visibility: hidden;
     /* opacity: 0; */
     transition: visibility 200ms ease-in-out;
+    text-align: left;
 }
 
 /* Each listItem in the unordered list */
@@ -99,9 +112,8 @@
 
 /* Company Logo */
 .logo {
-    position: absolute;
-    top:0;
-    left:0;
+    grid-column: 1;
+    grid-row: 1;
     cursor: pointer;
     margin: 20px 0 20px 20px;
     width: 100px;
@@ -111,40 +123,45 @@
 }
 
 /* Hide the hamburger menu */
-.hamburger {
-    visibility: hidden;
-    /* absolute takes this element out of the flex layout*/
-    position: absolute;
-    right: 0;
-    top: 0;
+.hamburger{
+    display: none;
     width: 50px;
     height: 50px;
     max-width: 100%;
     max-height: 100%;
-    margin: 20px 20px 20px 0;
+    /* margin: 20px 20px 20px 0; */
     cursor: pointer;
 }
 
 /*Responsive: when the screen is px or smaller **/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 900px){
 
     .nav_list {
-        visibility: hidden;
+        display: none;
     }
     .hamburger {
-        visibility: visible;
+        display:block;
+        grid-column: 3;
+        grid-row: 1;
     }
 
     /* For when the hamburger menu is activated */
     .nav_bar.activate {
         max-height: 500px;
-        height: calc(var(--nav-height) * 6);
+        /* height: calc(var(--nav-height) * 6); */
         justify-content: center;
     }
     .nav_list.activate {
-        visibility: visible;
+        display: inline-block;
+        width: 100%;
+        grid-column: 2;
+        grid-row: 2;
     }
     .nav_list.activate li {
         display: block;
+        /* background-color: var(--blue); */
+        /* margin: 0 auto; */
+        text-align: center;
     }
+    
 }
