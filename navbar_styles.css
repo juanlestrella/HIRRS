@@ -8,6 +8,7 @@
     --blue: #0070E0;
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
+    /*need to remove nav height with grid layout too */
     --nav-height: 79px;
 }
 
@@ -31,9 +32,6 @@
     align-items: center;
     background-color: #222F38;
     gap: 10px;
-
-    /* prevents the height from moving when the width of the screen is too low */
-    /* max-height: var(--nav-height); */
 }
 
 /* Parent unordered list */
@@ -41,7 +39,6 @@
     display: inline-block;
     grid-column: 3;
     grid-row: 1;
-    /* text-align: right; */
 }
 
 /* Direct list item (li) children of .navlist */
@@ -76,9 +73,7 @@
     min-width: 120px;
     box-shadow: 0 0 5px gray;
     background-color: #fff;
-    /* border-radius: 2%; */
     visibility: hidden;
-    /* opacity: 0; */
     transition: visibility 200ms ease-in-out;
     text-align: left;
 }
@@ -87,14 +82,12 @@
 .submenu li {
     display: block;
     list-style: none;
-    /* padding: 1.25rem 1rem; */
 }
 
 /* Each a tag in each listItem */
 .submenu a {
     display: block;
     color: var(--midnight-blue);
-    /* padding: 1.25rem 1rem; */
 }
 
 /* Highlight and pointer when hovering on each list item */
@@ -106,7 +99,6 @@
 
 /* Make the drop down list visible */
 .main_menu:hover > .submenu, .main_menu:focus > .submenu {
-    /* opacity: 1; */
     visibility: visible;
 }
 
