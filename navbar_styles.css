@@ -9,7 +9,7 @@
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
     /*need to remove nav height with grid layout too */
-    --nav-height: 79px;
+    --nav-height: 90px;
 }
 
 /* boilerplate to reduce all margin and padding to  */
@@ -29,6 +29,7 @@
     /*GRID LAYOUT*/
     display: grid;
     grid-template-columns: auto 1fr auto;
+    
     align-items: center;
     background-color: #222F38;
     gap: 10px;
@@ -68,6 +69,7 @@
 
 /* Unordered list of the drop downs */
 .submenu {
+    /* display:none; */
     position: absolute;
     top: var(--nav-height);
     min-width: 120px;
@@ -75,7 +77,6 @@
     background-color: #fff;
     visibility: hidden;
     transition: visibility 200ms ease-in-out;
-    text-align: left;
 }
 
 /* Each listItem in the unordered list */
@@ -159,6 +160,18 @@
         /* background-color: var(--blue); */
         /* margin: 0 auto; */
         text-align: center;
+    }
+    .submenu.hide {
+        display: none;
+    }
+    .submenu a {
+        color: var(--white);
+    }
+    .main_menu:hover > .submenu, .main_menu:focus > .submenu {
+        display: block;
+        position: static;
+        background-color: var(--midnight-blue);
+        /* box-shadow: none; */
     }
     
 }
