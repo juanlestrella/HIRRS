@@ -8,6 +8,7 @@
     --blue: #0070E0;
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
+    --midnight-blue-darker: #222F3880;
     /*need to remove nav height with grid layout too */
     --nav-height: 90px;
 }
@@ -59,7 +60,7 @@
 }
 
 /* Main menu's direct first child that is an "a tag" being hover and/or focus*/
-.main_menu > a:first-child:hover, .main_menu > a:first-child:focus {
+.main_menu > a:hover, .main_menu > a:focus {
     background-color: var(--blue);
     padding: 1rem;
     border-radius: 1.5rem;
@@ -161,6 +162,10 @@
         /* margin: 0 auto; */
         text-align: center;
     }
+    .submenu {
+        box-shadow: none;
+        border: 1px solid darkgray;
+    }
     .submenu.hide {
         display: none;
     }
@@ -171,7 +176,16 @@
         display: block;
         position: static;
         background-color: var(--midnight-blue);
-        /* box-shadow: none; */
+    }
+    .main_menu {
+        padding: 0%;
+    }
+    .main_menu > a {
+        display: block;
+        height: fit-content;
+    }
+    .main_menu:hover > a, .main_menu:focus > {
+        border-radius: 0;
     }
     
 }

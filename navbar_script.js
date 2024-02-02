@@ -8,6 +8,7 @@ const submenu = document.querySelectorAll(".submenu");
 
  // call the  mobileMenu when the hamburger menu is clicked
 hamburger.addEventListener("click", mobileMenu);
+// mainMenu.forEach(element => element.addEventListener("click", submenuPopup(element)))
 
 /*
     1.) call the activate class for navBar and navList
@@ -17,5 +18,11 @@ function mobileMenu() {
     navBar.classList.toggle("activate");
     navList.classList.toggle("activate");
     submenu.forEach( element => element.classList.toggle("hide"));
-
 }
+
+function openSubmenu(element){
+    item.classList.toggle("popup");
+}
+// function submenuPopup(item) {
+//     
+// }
