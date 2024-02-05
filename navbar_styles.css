@@ -56,6 +56,7 @@ a:hover, a:focus {
     font-size: 1rem;
     color: var(--white);
     padding: 1rem;
+    cursor: pointer;
 }
 
 /* Main Menu items */
@@ -109,6 +110,9 @@ a:hover, a:focus {
 
 /*Responsive: when the screen is px or smaller **/
 @media only screen and (max-width: 900px){
+    li, a {
+        color: var(--white);
+    }
     /***** Hamburger Menu *****/
     .hamburger, .a_hamburger {
         display: block;
@@ -151,19 +155,25 @@ a:hover, a:focus {
     .main_menu:hover a, .main_menu:focus a{
         border-radius: 0;
     }
-    .main_menu:hover .submenu, .main_menu:focus .submenu {
+    /* .main_menu:hover .submenu, .main_menu:focus .submenu {
         display: block;
         position: static;
         background-color: var(--midnight-blue);
+    } */
+    .submenu.show{
+        display: block;
+        position: static;
+        background-color: var(--midnight-blue);
+        /* color: var(--white); */
     }
 
     /***** Submenu *****/
+    .submenu.hide {
+        display: none;
+    }
     .submenu {
         box-shadow: none;
         border: 1px solid darkgray;
-    }
-    .submenu.hide {
-        display: none;
     }
     .submenu a {
         color: var(--white);
