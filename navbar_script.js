@@ -15,7 +15,6 @@ hamburger.addEventListener("click", mobileMenu);
     2.) hide the submenu so that the grid layout doesn't register all of them initially
 */
 function mobileMenu() {
-    navBar.classList.toggle("activate");
     navList.classList.toggle("activate");
     submenu.forEach( element => element.classList.toggle("hide"));
 }

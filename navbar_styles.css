@@ -2,48 +2,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/************* Boilerplate ***************/
 /* Create variables */
 :root {
     --white: #F9FAF7;
     --blue: #0070E0;
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
-    --midnight-blue-darker: #222F3880;
-    /*need to remove nav height with grid layout too */
     --nav-height: 90px;
 }
 
-/* boilerplate to reduce all margin and padding to  */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Give padding and highlight to all a tags */
+a:hover, a:focus {
+    background-color: var(--blue);
+}
+
 /************* NavBar ***************/
 .nav_bar {
-    /*FLEXBOX*/
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-
     /*GRID LAYOUT*/
     display: grid;
     grid-template-columns: auto 1fr auto;
-    
     align-items: center;
     background-color: #222F38;
     gap: 10px;
 }
 
-/* Parent unordered list */
+/* Unordered list (ul) */
 .nav_list {
     display: inline-block;
     grid-column: 3;
     grid-row: 1;
 }
 
-/* Direct list item (li) children of .navlist */
+/************* Main Menu ***************/
+
+/* Direct list item (li) children of .nav_list */
 .main_menu {
     display: inline-block;
     list-style: none;
@@ -59,18 +58,20 @@
     padding: 1rem;
 }
 
-/* Main menu's direct first child that is an "a tag" being hover and/or focus*/
-.main_menu > a:hover, .main_menu > a:focus {
-    background-color: var(--blue);
-    padding: 1rem;
+/* Main Menu items */
+.main_menu > a {
     border-radius: 1.5rem;
 }
 
-/**************** DROP DOWN LIST ************************/
+/* Make the drop down list visible */
+.main_menu:hover > .submenu, .main_menu:focus > .submenu {
+    visibility: visible;
+}
+
+/************* Submenu ***************/
 
 /* Unordered list of the drop downs */
 .submenu {
-    /* display:none; */
     position: absolute;
     top: var(--nav-height);
     min-width: 120px;
@@ -81,30 +82,13 @@
 }
 
 /* Each listItem in the unordered list */
-.submenu li {
+.submenu li, .submenu a {
     display: block;
     list-style: none;
-}
-
-/* Each a tag in each listItem */
-.submenu a {
-    display: block;
     color: var(--midnight-blue);
 }
 
-/* Highlight and pointer when hovering on each list item */
-.submenu li:hover, .submenu li:focus {
-    background-color: var(--blue);
-    color: var(--white);
-    cursor: pointer;
-}
-
-/* Make the drop down list visible */
-.main_menu:hover > .submenu, .main_menu:focus > .submenu {
-    visibility: visible;
-}
-
-/* Company Logo */
+/************* Logo ***************/
 .logo, .a_logo {
     grid-column: 1;
     grid-row: 1;
@@ -118,50 +102,62 @@
     margin: 20px;
 }
 
-/* Hide the hamburger menu */
+/************* Hamburger ***************/
 .hamburger, .a_hamburger{
     display: none;
 }
 
 /*Responsive: when the screen is px or smaller **/
 @media only screen and (max-width: 900px){
-
-    .nav_list {
-        display: none;
-    }
+    /***** Hamburger Menu *****/
     .hamburger, .a_hamburger {
-        display:block;
+        display: block;
         grid-column: 3;
         grid-row: 1;
         width: 50px;
         height: 50px;
-        max-width: 100%;
-        max-height: 100%;
-        /* margin: 20px 20px 20px 0; */
         cursor: pointer;
     }
     .a_hamburger{
         margin: 20px;
     }
+    .a_hamburger:hover, .a_hamburger:focus {
+        background-color: var(--midnight-blue);
+    }
 
-    /* For when the hamburger menu is activated */
-    .nav_bar.activate {
-        max-height: 500px;
-        /* height: calc(var(--nav-height) * 6); */
-        justify-content: center;
+    /***** NavList *****/
+    .nav_list {
+        display: none;
     }
     .nav_list.activate {
-        display: inline-block;
+        display: block;
         width: 100%;
         grid-column: 2;
         grid-row: 2;
     }
     .nav_list.activate li {
         display: block;
-        /* background-color: var(--blue); */
-        /* margin: 0 auto; */
         text-align: center;
     }
+
+    /***** Main Menu *****/
+    .main_menu {
+        padding: 0;
+    }
+    .main_menu a {
+        display: block;
+        height: fit-content;
+    }
+    .main_menu:hover a, .main_menu:focus a{
+        border-radius: 0;
+    }
+    .main_menu:hover .submenu, .main_menu:focus .submenu {
+        display: block;
+        position: static;
+        background-color: var(--midnight-blue);
+    }
+
+    /***** Submenu *****/
     .submenu {
         box-shadow: none;
         border: 1px solid darkgray;
@@ -171,21 +167,6 @@
     }
     .submenu a {
         color: var(--white);
-    }
-    .main_menu:hover > .submenu, .main_menu:focus > .submenu {
-        display: block;
-        position: static;
-        background-color: var(--midnight-blue);
-    }
-    .main_menu {
-        padding: 0%;
-    }
-    .main_menu > a {
-        display: block;
-        height: fit-content;
-    }
-    .main_menu:hover > a, .main_menu:focus > {
-        border-radius: 0;
     }
     
 }
