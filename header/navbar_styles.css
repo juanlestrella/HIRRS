@@ -159,14 +159,17 @@ a:hover, a:focus {
         box-shadow: none;
         border: 1px solid darkgray;
     }
+    /* initially hide menu */
     .submenu.hide {
         display: none;
     }
+    /* show submenu when a main menu item is clicked */
     .submenu.show{
         visibility: visible;
         position: static;
         background-color: var(--midnight-blue);
     }
+    /* change color of a tag to white */
     .submenu a {
         color: var(--white);
     }
