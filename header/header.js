@@ -6,7 +6,7 @@ const navList = document.querySelector(".nav_list");
 const mainMenu = document.querySelectorAll(".main_menu")
 const submenu = document.querySelectorAll(".submenu");
 
- // call the  mobileMenu when the hamburger menu is clicked
+// call the  mobileMenu when the hamburger menu is clicked
 hamburger.addEventListener("click", mobileMenu);
 // mainMenu.forEach(element => element.addEventListener("click", openSubmenu));
 
@@ -23,14 +23,9 @@ function openSubmenu(element){
     console.log(element.nextElementSibling.classList);
     if(element.nextElementSibling.classList.contains("hide")){
         element.nextElementSibling.classList.replace("hide", "show");
-        console.log("hide");
+        // console.log("hide");
     }else{
         element.nextElementSibling.classList.replace("show", "hide");
-        console.log("show");
+        // console.log("show");
     }
 }
-
-
-// function submenuPopup(item) {
-//     
-// }
