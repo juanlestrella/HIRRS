@@ -93,6 +93,8 @@ a:hover, a:focus {
 header .logo, header .a_logo {
     grid-column: 1;
     grid-row: 1;
+    width: 150px;
+    height: 75px;
 }
 
 header .a_logo {

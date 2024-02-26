@@ -3,14 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /************* Boilerplate ***************/
-/* Tags */
+/**** Tags ****/
 footer {
     display: flex;
     flex-direction: column;
     padding: 5px;
     background-color: var(--midnight-blue);
     color: var(--white);
-    margin-bottom: 10px;
 }
 footer ul {
     list-style: none;
@@ -18,57 +17,54 @@ footer ul {
 footer ul li {
     margin-bottom: 2px;
 }
-a {
-    cursor: pointer;
-}
 
-/* footer_div container */
+/**** footer_div container ****/
 .footer_div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    /* align-items: center; */
 }
-
 /* footer_div items */
-.footer_div div {
+.footer_div > div {
     flex: 1;
-    padding: 10px;
-    /* text-align: left; */
-    /* border: 2px solid red; */
+    margin: 10px;
+}
+/* Logo size specifically for the footer */
+footer .logo, footer .a_logo {
+    width: 250px;
+    height: 125px;
 }
 
-/* SITEMAP */
-#sitemap_footer_h1 {
-    align-self: center;
-}
+/**** SITEMAP ****/
 /* sitemap container */
 #sitemap_footer_div {
+    display: flex;
+    flex-direction: column;
+}
+#inner_footer_div{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: stretch;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
+
 /* sitemap items */
 #sitemap_footer_div div {
     flex: 1 1 0;
 }
 /* indent all li in sitemap */
 #sitemap_footer_div li{
-    margin-left: 15px;
+    margin: 10px;
 }
-footer .logo, footer .a_logo {
-    width: 250px;
-    height: 125px;
-}
-/* footer_div and copyrights are both items of footer */
+
+/**** Copyrights  ****/
 #copyrights {
     align-self: center;
     font-size: .75rem;
 }
 
-/*Responsive: when the screen is 1000px or smaller **/
-@media only screen and (max-width: 1000px){
+/****Responsive: when the screen is 900px or smaller ****/
+@media only screen and (max-width: 900px){
 
 }
