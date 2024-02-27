@@ -53,6 +53,9 @@ footer .logo, footer .a_logo {
     flex-direction: row;
     justify-content: space-between;
 }
+#sitemap_footer_div a:hover, #sitemap_footer_div a:focus{
+    color: var(--blue);
+}
 
 /**** Copyrights  ****/
 #copyrights {

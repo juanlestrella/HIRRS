@@ -19,12 +19,12 @@
 }
 
 /* Give padding and highlight to all a tags */
-a:hover, a:focus {
+#nav_list a:hover, #nav_list a:focus {
     background-color: var(--blue);
 }
 
 /************* NavBar ***************/
-.nav_bar {
+#nav_bar {
     /*GRID LAYOUT*/
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -34,7 +34,7 @@ a:hover, a:focus {
 }
 
 /* Unordered list (ul) */
-.nav_list {
+#nav_list {
     display: inline-block;
     grid-column: 3;
     grid-row: 1;
@@ -42,7 +42,7 @@ a:hover, a:focus {
 
 /************* Main Menu ***************/
 
-/* Direct list item (li) children of .nav_list */
+/* Direct list item (li) children of #nav_list */
 .main_menu {
     display: inline-block;
     list-style: none;
@@ -128,16 +128,16 @@ header .a_logo {
     }
 
     /***** NavList *****/
-    .nav_list {
+    #nav_list {
         display: none;
     }
-    .nav_list.activate {
+    #nav_list.activate {
         display: block;
         width: 100%;
         grid-column: 2;
         grid-row: 2;
     }
-    .nav_list.activate li {
+    #nav_list.activate li {
         display: block;
         text-align: center;
     }
