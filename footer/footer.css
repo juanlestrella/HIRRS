@@ -10,7 +10,7 @@ footer {
     background-color: var(--midnight-blue);
     color: var(--white);
     /* This will make the footer always stay at the bottom */
-    margin-top: auto;
+    margin-top:auto;
 }
 footer ul {
     list-style: none;
