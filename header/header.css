@@ -5,17 +5,7 @@
 /************* Boilerplate ***************/
 /* Create variables */
 :root {
-    --white: #F9FAF7;
-    --blue: #0070E0;
-    --serenity: #9BBBE3;
-    --midnight-blue: #222F38;
     --nav-height: 90px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 /* Give padding and highlight to all a tags */
@@ -29,6 +19,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    justify-content: center;
     background-color: #222F38;
     gap: 10px;
 }
@@ -98,7 +89,7 @@ header .logo, header .a_logo {
 }
 
 header .a_logo {
-    margin: 20px;
+    margin: 10px 0 10px 10px;
 }
 
 /************* Hamburger ***************/

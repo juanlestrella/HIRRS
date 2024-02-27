@@ -9,7 +9,8 @@ footer {
     flex-direction: column;
     background-color: var(--midnight-blue);
     color: var(--white);
-    padding:5px
+    /* This will make the footer always stay at the bottom */
+    margin-top: auto;
 }
 footer ul {
     list-style: none;
@@ -23,7 +24,6 @@ footer ul li, footer h3  {
 .footer_div {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
 }
 /* footer_div items */
 .footer_div > div {
@@ -63,7 +63,9 @@ footer .logo, footer .a_logo {
     font-size: .75rem;
 }
 
-/****Responsive: when the screen is 1000px or smaller ****/
+/**** Responsive: when the screen is 1000px or smaller ****/
 @media only screen and (max-width: 1000px){
-
+    .footer_div {
+        flex-direction: column;
+    }
 }
