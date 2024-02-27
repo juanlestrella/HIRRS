@@ -7,22 +7,22 @@
 footer {
     display: flex;
     flex-direction: column;
-    padding: 5px;
     background-color: var(--midnight-blue);
     color: var(--white);
+    padding:5px
 }
 footer ul {
     list-style: none;
 }
-footer ul li {
-    margin-bottom: 2px;
+footer ul li, footer h3  {
+    margin-bottom: 5px;
 }
+
 
 /**** footer_div container ****/
 .footer_div {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     /* align-items: center; */
 }
 /* footer_div items */
@@ -32,30 +32,26 @@ footer ul li {
 }
 /* Logo size specifically for the footer */
 footer .logo, footer .a_logo {
-    width: 250px;
-    height: 125px;
+    width: 200px;
+    height: 100px;
+}
+.footer_div div > div {
+    margin-bottom: 10px;
 }
 
 /**** SITEMAP ****/
-/* sitemap container */
-#sitemap_footer_div {
+/* sitemap outer container */
+#third_footer_div {
+    flex: 2 1 0;
+
     display: flex;
     flex-direction: column;
 }
-#inner_footer_div{
+/* sitemap inner container */
+#sitemap_footer_div{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: stretch;
-}
-
-/* sitemap items */
-#sitemap_footer_div div {
-    flex: 1 1 0;
-}
-/* indent all li in sitemap */
-#sitemap_footer_div li{
-    margin: 10px;
+    justify-content: space-between;
 }
 
 /**** Copyrights  ****/
@@ -64,7 +60,7 @@ footer .logo, footer .a_logo {
     font-size: .75rem;
 }
 
-/****Responsive: when the screen is 900px or smaller ****/
-@media only screen and (max-width: 900px){
+/****Responsive: when the screen is 1000px or smaller ****/
+@media only screen and (max-width: 1000px){
 
 }
