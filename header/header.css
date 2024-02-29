@@ -94,7 +94,7 @@ header .a_logo {
 
 /*Responsive: when the screen is 1000px or smaller **/
 @media only screen and (max-width: 1000px){
-    li, a {
+    header li, header a {
         color: var(--white);
     }
     /***** Hamburger Menu *****/
