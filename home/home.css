@@ -1,0 +1,24 @@
+#home_div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+
+}
+
+#home_div p{
+    max-width: 450px;
+}
+
+.home_div_items{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.blue {
+    background-color: var(--blue);
+}
