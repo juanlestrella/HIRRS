@@ -8,6 +8,7 @@
     --blue: #0070E0;
     --serenity: #9BBBE3;
     --midnight-blue: #222F38;
+    --nav-height: 90px;
 }
 * {
     box-sizing: border-box;

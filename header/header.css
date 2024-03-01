@@ -1,9 +1,4 @@
-/* Create variables */
-:root {
-    --nav-height: 90px;
-}
-
-/* Give padding and highlight to all a tags */
+/* Give highlight to all a tags */
 #nav_list a:hover, #nav_list a:focus {
     background-color: var(--blue);
 }
@@ -16,6 +11,7 @@
     align-items: center;
     justify-content: center;
     background-color: #222F38;
+    padding: 10px 20px;
     gap: 10px;
 }
 

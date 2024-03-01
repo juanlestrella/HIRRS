@@ -1,31 +1,65 @@
+/* Main div container */
 #home_div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     /* justify-content: space-between; */
+    padding-bottom: 10px;
 }
 
+/* Divs inside the main div container */
 .home_div_items{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-evenly;
+    align-items: center;
     /* justify-content: center; */
     width: 100%;
-    padding: 10px;
+    /* padding: 0 100px; */
 }
 
+/* DIVS with blue background*/
 .blue {
     color: var(--white);
     background-color: var(--blue);
 }
 
+/* Paragraphs */
 #home_div p {
-    max-width: 500px;
+    max-width: 800px;
 }
 
-#home_div img {
-    min-width: 100px;
-    max-width: 450px;
+/*** IMAGES ***/
+/* Home page images */
+.home_images {
+    min-width: 200px;
+    max-width: 500px;
     height: 100%;
+}
+/* Banner */
+#banner_image {
+    width: 100%;
+    min-height: 250px;
+    max-height: 500px;
+}
+/* Statistics */
+.stats_images {
+    width: 200px;
+    height: 200px;
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 1000px){
+    /* Change stats to column */
+    #stats_div {
+        flex-direction: column;
+    }
+    /* Hide images */
+    .home_images {
+        display: none;
+    }
+    /* Add left and right padding to the paragraphs */
+    #home_div h1, #home_div h3, #home_div ul, #home_div p{
+        padding: 10px;
+    }
 }
