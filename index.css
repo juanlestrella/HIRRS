@@ -30,3 +30,22 @@ a {
 li {
     list-style-position: inside;
 }
+
+.crumbs {
+    background-color: var(--serenity);
+    padding: 10px 10px 10px 40px;
+
+}
+
+.page_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    height: 120px;
+}
+
+.page_title h1 {
+    size: 2rem;
+}
