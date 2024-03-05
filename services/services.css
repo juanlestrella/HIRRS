@@ -1,0 +1,32 @@
+#services_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.service_card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 10px 10px 10px;
+}
+
+.service_content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.services_img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.service_content h1 {
+    text-align: center;
+    padding: 20px 0;
+}
