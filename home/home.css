@@ -14,12 +14,6 @@
     width: 100%;
 }
 
-/* DIVS with blue background*/
-.blue {
-    color: var(--white);
-    background-color: var(--blue);
-}
-
 /* Paragraphs */
 #home_div p {
     max-width: 800px;

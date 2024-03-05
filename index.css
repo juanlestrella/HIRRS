@@ -49,3 +49,9 @@ li {
 .page_title h1 {
     size: 2rem;
 }
+
+/* DIVS with blue background*/
+.blue {
+    color: var(--white);
+    background-color: var(--blue);
+}

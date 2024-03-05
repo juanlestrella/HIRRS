@@ -1,21 +1,34 @@
 #staffs_div{
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 
 .staff_card {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content:  center;
+    gap: 20px;
+    padding: 10px 0px;
+    width: 100%;
 }
 
 .staff_info {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 200px;
+    text-align: center;
+    gap: 5px;
     /* text-align: center; */
 }
-
+.staff_bio {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    min-width: 200px;
+}
 .staff_img {
     width: 200px;
     height: 200px;
