@@ -1,0 +1,12 @@
+#funding_div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.funding_card {
+    padding: 10px;
+    max-width: 800px;
+    min-width: 500px;
+}

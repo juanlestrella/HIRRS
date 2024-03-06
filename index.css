@@ -26,6 +26,10 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
+/* unvisited link */
+a:link {
+    color: inherit;
+}
 
 li {
     list-style-position: inside;
