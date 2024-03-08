@@ -1,0 +1,27 @@
+#news_div{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#news_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.news_card{
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: solid;
+}
+
+.news_img{
+    width: 100%;
+    max-width: 300px;
+}
