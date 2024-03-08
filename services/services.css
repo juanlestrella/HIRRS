@@ -16,14 +16,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 800px;
 }
 
 .services_img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 800px;
 }
 
 .service_content h1 {
