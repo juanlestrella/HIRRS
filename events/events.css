@@ -1,13 +1,17 @@
-#resources_div {
+#events_div{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.resources_card {
+.events_card{
     padding: 10px;
     width: 100%;
     max-width: 800px;
 }
 
+.events_img{
+    width: 100%;
+    max-width: 800px;
+}

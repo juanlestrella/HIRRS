@@ -24,7 +24,7 @@ body {
 
 a {
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
 }
 /* unvisited link */
 a:link {

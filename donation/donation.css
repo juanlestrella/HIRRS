@@ -1,0 +1,33 @@
+#donation_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#donation_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px;
+    
+}
+
+#donation_card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.donation_button{
+    width: 200px;
+    height: 50px;
+    background-color: var(--blue);
+    color: var(--white);
+    /* TODO: Add more design */
+} 
