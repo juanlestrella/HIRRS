@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="HIRRS Home Page">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="../index.css">
+        <link rel="stylesheet" href="../header/header.css">
+        <link rel="stylesheet" href="../footer/footer.css">
+        <link rel="stylesheet" href="/home/home.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            $(
+                function() {
+                    $("#header").load("../header/header.html");
+                    $("#footer").load("../footer/footer.html");
+                }
+            );
+        </script>
     <body>
+        <header id="header"></header>
         <div id="home_div">
             <!-- Banner -->
             <div class="home_div_items banner_div">
@@ -70,5 +91,6 @@
                 </div>
             </div>
         </div>
+        <footer id="footer"></footer>
     </body>
 </html>

@@ -27,7 +27,7 @@ a {
     text-decoration: underline;
 }
 /* unvisited link */
-a:link {
+a:link, a:visited {
     color: inherit;
 }
 
