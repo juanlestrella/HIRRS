@@ -71,6 +71,10 @@
     color: var(--midnight-blue);
 }
 
+.submenu a:hover {
+    color: var(--white);
+}
+
 /************* Logo ***************/
 header .logo, header .a_logo {
     grid-column: 1;

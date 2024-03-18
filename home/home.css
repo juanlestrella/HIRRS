@@ -1,38 +1,53 @@
-/* Main div container */
+/***** Main div container *****/
 #home_div {
     display: flex;
     flex-direction: column;
 }
 
-/* Divs inside the main div container */
-.home_div_items{
+/***** BANNER *****/
+/* .banner_div {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin:0;   
+} */
+#banner_image {
+    width: 100%;
+    min-height: 250px;
+    max-height: 800px;
+    padding: 0;
+    margin:0;
+}
+
+/***** Upcoming Event, Our Mission, Our History *****/
+.home_div_items {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 0 100px;
 }
-
 /* Paragraphs */
 #home_div p {
     max-width: 800px;
 }
-
-/*** IMAGES ***/
 /* Home page images */
 .home_images {
     min-width: 200px;
     max-width: 500px;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
 }
-/* Banner */
-#banner_image {
-    width: 100%;
-    min-height: 250px;
-    max-height: 500px;
+
+/***** Statistics *****/
+.stats_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
-/* Statistics */
 .stats_images {
     width: 200px;
     height: 200px;
